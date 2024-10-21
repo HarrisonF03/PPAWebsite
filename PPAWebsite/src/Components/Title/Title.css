@@ -1,0 +1,30 @@
+.title {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 50px 0 30px;
+    letter-spacing: 1.5px; /* Adds subtle spacing for a cleaner look */
+  }
+  
+  .title h2 {
+    font-size: 32px;
+    color: black;
+    margin-top: 5px;
+    text-transform: none;
+    font-weight: 700; /* Slightly bolder for better emphasis */
+    line-height: 1.2; /* Improves readability */
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      margin: 40px 0 20px;
+      font-size: 14px; /* Slightly smaller font on smaller screens */
+    }
+  
+    .title h2 {
+      font-size: 28px; /* Adjusting font size for better mobile responsiveness */
+    }
+  }
+  

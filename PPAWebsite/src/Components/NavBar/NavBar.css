@@ -1,0 +1,169 @@
+.logo {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+  margin-left: 0; /* Ensure there's no unintended left margin */
+}
+
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px; /* Adjust padding as needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #dbdbdb;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional rule to ensure logo sticks to the left */
+.Container .logo {
+  margin-right: auto; /* Pushes the other elements to the right */
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation Links */
+.nav-links {
+  color: black;
+  display: flex; /* Ensure links are displayed horizontally */
+  align-items: center; /* Vertically align links with the logo */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: auto; /* Push links to the right side next to the logo */
+}
+
+.nav-links li {
+  margin-left: 20px; /* Adjusted spacing for a more balanced layout */
+}
+
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff69b4;
+}
+
+/* Button Styling */
+.btn {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 30px;
+  margin-left: 20px; /* Space between last link and button */
+}
+
+.btn:hover {
+  background-color: #ff1493;
+  transform: scale(1.05);
+}
+
+/* Toggle Button for Mobile View */
+.toggle-button {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toggle-button:hover {
+  color: #ff69b4;
+}
+
+/* Side Navigation for Mobile View */
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #c7c7c7;
+  transition: right 0.3s ease;
+  z-index: 2000;
+  padding-top: 60px;
+}
+
+.side-nav.open {
+  right: 0;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav ul li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.side-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.side-nav ul li a:hover {
+  color: #ff69b4;
+}
+
+/* Close Button for Side Navigation */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #ff69b4;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+  .nav-links {
+    display: none;
+  }
+
+  .toggle-button {
+    display: block;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .nav-links li {
+    margin-left: 10px;
+  }
+}

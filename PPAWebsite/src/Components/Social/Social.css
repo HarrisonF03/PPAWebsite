@@ -1,0 +1,58 @@
+/* Footer Styles */
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #dbdbdb; /* Light gray to contrast with white background */
+  border-top: 1px solid #eee;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-button {
+  width: 40px;
+  height: 40px;
+  background-color: #ff69b4; /* Matching the primary pink color */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-button img {
+  width: 20px;
+  height: 20px;
+  filter: invert(100%); /* Making sure icons are white */
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+  background-color: #ff1493; /* Slightly darker pink on hover */
+}
+
+.contact-info p {
+  margin: 5px 0;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .social {
+    padding: 30px 10px;
+  }
+  
+  .social-buttons {
+    gap: 10px;
+  }
+  
+  .contact-info p {
+    font-size: 12px;
+  }
+}
